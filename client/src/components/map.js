@@ -1,5 +1,11 @@
-import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import React, { useState, useEffect } from "react";
+import {
+	MapContainer,
+	TileLayer,
+	Marker,
+	Popup,
+	useMapEvents,
+} from "react-leaflet";
 import "../map.css";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -11,18 +17,41 @@ function SimpleMap() {
 		iconAnchor: [10, 41],
 		popupAnchor: [2, -40],
 	});
+
+	const [initialPosition, setInitialPosition] = useState([50, 50]);
+	const [selectedPosition, setSelectedPosition] = useState([50, 50]);
+
+	useEffect(() => {
+		navigator.geolocation.getCurrentPosition((position) => {
+			const { latitude, longitude } = position.coords;
+			setInitialPosition([latitude, longitude]);
+		});
+	}, []);
+
+	const Markers = () => {
+		const map = useMapEvents({
+			click(e) {
+				setSelectedPosition([e.latlng.lat, e.latlng.lng]);
+			},
+		});
+
+		return <></>;
+	};
+
+	// mymap.on("click", onMapClick);
 	return (
 		<>
-			<MapContainer
-				center={[49.263569, -123.138573]}
-				zoom={13}
-				scrollWheelZoom={true}
-			>
+			<MapContainer center={selectedPosition || initialPosition} zoom={12}>
 				<TileLayer
 					attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 				/>
-				<Marker icon={customMarker} position={[49.263569, -123.138573]}>
+				<Markers />
+				<Marker
+					icon={customMarker}
+					position={selectedPosition || initialPosition}
+					interactive={false}
+				>
 					<Popup>
 						A pretty CSS3 popup. <br /> Easily customizable.
 					</Popup>
