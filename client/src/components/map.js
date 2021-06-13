@@ -32,6 +32,7 @@ function SimpleMap() {
 		const map = useMapEvents({
 			click(e) {
 				setSelectedPosition([e.latlng.lat, e.latlng.lng]);
+				console.log(e.latlng.lat, e.latlng.lng);
 			},
 		});
 

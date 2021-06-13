@@ -11,6 +11,7 @@
     "gatsby": "^3.6.2",
     "gatsby-cli": "^3.6.0",
     "gatsby-starter-leaflet": "git+https://github.com/colbyfayock/gatsby-starter-leaflet.git",
+    "geo-reverse": "^1.0.13",
     "google-map": "^1.1.0",
     "leaflet": "^1.7.1",
     "new": "^0.1.1",
