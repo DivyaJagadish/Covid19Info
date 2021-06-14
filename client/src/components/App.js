@@ -5,6 +5,7 @@ import Card from "./StatComponents";
 import { PieChart } from "react-minimal-pie-chart";
 import useApplicationData from "./helpers/useApplicationData";
 import DataContext from "./dataContext";
+
 export default function App() {
 	const { state, getdataforCountry } = useApplicationData();
 	const data = {
@@ -19,9 +20,13 @@ export default function App() {
 				<Card />
 				<PieChart
 					data={[
-						{ title: "One", value: 10, color: "#E38627" },
-						{ title: "Two", value: 15, color: "#C13C37" },
-						{ title: "Three", value: 20, color: "#6A2135" },
+						{
+							title: "Recovered",
+							value: state.RecoveredCases,
+							color: "	#00FF00",
+						},
+						{ title: "Deaths", value: state.Totaldeath, color: "#C13C37" },
+						{ title: "Active", value: state.ActiveCases, color: "#6A2135" },
 					]}
 					label={({ dataEntry }) => dataEntry.title}
 				/>
