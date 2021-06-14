@@ -32,14 +32,13 @@ function SimpleMap() {
 		const map = useMapEvents({
 			click(e) {
 				setSelectedPosition([e.latlng.lat, e.latlng.lng]);
+				// getdataforCountry(e.latlng.lat, e.latlng.lng);
 				console.log(e.latlng.lat, e.latlng.lng);
 			},
 		});
 
 		return <></>;
 	};
-
-	// mymap.on("click", onMapClick);
 	return (
 		<>
 			<MapContainer center={selectedPosition || initialPosition} zoom={12}>
