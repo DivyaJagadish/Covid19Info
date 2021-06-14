@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
 	MapContainer,
 	TileLayer,
@@ -9,8 +9,8 @@ import {
 import "../map.css";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import getdataforCountry from "./helpers/useApplicationData";
 
+import Datacontext from "./dataContext";
 function SimpleMap() {
 	const customMarker = new L.icon({
 		iconUrl: "https://unpkg.com/leaflet@1.5.1/dist/images/marker-icon.png",
@@ -18,7 +18,7 @@ function SimpleMap() {
 		iconAnchor: [10, 41],
 		popupAnchor: [2, -40],
 	});
-
+	const { getdataforCountry } = useContext(Datacontext);
 	const [initialPosition, setInitialPosition] = useState([50, 50]);
 	const [selectedPosition, setSelectedPosition] = useState([50, 50]);
 
