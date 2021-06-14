@@ -9,6 +9,7 @@ import {
 import "../map.css";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import getdataforCountry from "./helpers/useApplicationData";
 
 function SimpleMap() {
 	const customMarker = new L.icon({
@@ -32,8 +33,8 @@ function SimpleMap() {
 		const map = useMapEvents({
 			click(e) {
 				setSelectedPosition([e.latlng.lat, e.latlng.lng]);
-				// getdataforCountry(e.latlng.lat, e.latlng.lng);
-				console.log(e.latlng.lat, e.latlng.lng);
+				getdataforCountry(e.latlng.lat, e.latlng.lng);
+				// console.log(e.latlng.lat, e.latlng.lng);
 			},
 		});
 
