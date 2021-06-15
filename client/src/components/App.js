@@ -5,7 +5,7 @@ import Card from "./StatComponents";
 import { PieChart } from "react-minimal-pie-chart";
 import useApplicationData from "./helpers/useApplicationData";
 import DataContext from "./dataContext";
-
+import "../App.css";
 export default function App() {
 	const { state, getdataforCountry } = useApplicationData();
 	const data = {
@@ -17,7 +17,7 @@ export default function App() {
 			<Nav />
 			<DataContext.Provider value={data}>
 				<SimpleMap />
-				<Card />
+
 				<PieChart
 					data={[
 						{
@@ -29,7 +29,11 @@ export default function App() {
 						{ title: "Active", value: state.ActiveCases, color: "#6A2135" },
 					]}
 					label={({ dataEntry }) => dataEntry.title}
+					radius={20}
+					labelStyle={{ fontSize: "2px", fontWeight: "bold" }}
 				/>
+
+				<Card />
 			</DataContext.Provider>
 		</>
 	);
