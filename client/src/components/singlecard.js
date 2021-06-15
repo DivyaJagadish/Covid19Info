@@ -1,16 +1,17 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, rgbToHex } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 
 import CardContent from "@material-ui/core/CardContent";
 
 import Typography from "@material-ui/core/Typography";
-import { blue } from "@material-ui/core/colors";
+import { blue, blueGrey } from "@material-ui/core/colors";
 
 const useStyles = makeStyles({
 	root: {
 		minWidth: 275,
-		backgroundColor: blue,
+		backgroundColor: blueGrey,
+		maxWidth: 275,
 	},
 
 	pos: {
