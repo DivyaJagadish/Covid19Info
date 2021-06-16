@@ -2,13 +2,14 @@ import React, { useContext } from "react";
 import { PieChart } from "react-minimal-pie-chart";
 import DataContext from "./dataContext";
 import "../piechart.css";
-
+import Textdata from "./Text";
 export default function Piechart() {
 	const { state } = useContext(DataContext);
 	console.log(state);
 
 	return (
 		<p>
+			<Textdata data={`${state.CountryName} Statistics`} />
 			<PieChart
 				data={[
 					{
