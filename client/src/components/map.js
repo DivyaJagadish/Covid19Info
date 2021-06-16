@@ -16,25 +16,24 @@ function SimpleMap() {
 		iconUrl: "https://unpkg.com/leaflet@1.5.1/dist/images/marker-icon.png",
 		iconSize: [25, 41],
 		iconAnchor: [10, 41],
-		popupAnchor: [2, -40],
+		popupAnchor: [10, -40],
 	});
 	const { getdataforCountry } = useContext(Datacontext);
 	const [initialPosition, setInitialPosition] = useState([50, 50]);
-	const [selectedPosition, setSelectedPosition] = useState([50, 50]);
 
 	useEffect(() => {
 		navigator.geolocation.getCurrentPosition((position) => {
 			const { latitude, longitude } = position.coords;
 			setInitialPosition([latitude, longitude]);
+			getdataforCountry(latitude, longitude);
 		});
 	}, []);
 
 	const Markers = () => {
 		const map = useMapEvents({
 			click(e) {
-				setSelectedPosition([e.latlng.lat, e.latlng.lng]);
+				setInitialPosition([e.latlng.lat, e.latlng.lng]);
 				getdataforCountry(e.latlng.lat, e.latlng.lng);
-				// console.log(e.latlng.lat, e.latlng.lng);
 			},
 		});
 
@@ -42,7 +41,7 @@ function SimpleMap() {
 	};
 	return (
 		<>
-			<MapContainer center={selectedPosition || initialPosition} zoom={3}>
+			<MapContainer center={initialPosition} zoom={2}>
 				<TileLayer
 					attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -50,7 +49,7 @@ function SimpleMap() {
 				<Markers />
 				<Marker
 					icon={customMarker}
-					position={selectedPosition || initialPosition}
+					position={initialPosition}
 					interactive={false}
 				>
 					<Popup>
