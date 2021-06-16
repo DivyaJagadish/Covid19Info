@@ -8,16 +8,17 @@ export default  function StatComponents(props){
   console.log(state);
   return(
   <>
-   <div class = "stat">
+   <div className = "stat">
     <SingleCard title={"Country"} value={state.CountryName} />
     <SingleCard title={"Total Cases"} value={state.TotalCases} />
     <SingleCard title={"Recovered"} value={state.RecoveredCases} />
+    <p>
     <SingleCard  title={"Total Death"} value={state.Totaldeath} />
     <SingleCard  title={"Active Cases"} value={state.ActiveCases} />
     <SingleCard  title={"New Cases"} value={state.NewCases} />
+    </p>
    </div>
    </>
   )
-  
 }
 

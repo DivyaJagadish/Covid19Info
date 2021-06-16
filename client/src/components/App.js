@@ -2,7 +2,7 @@ import React from "react";
 import SimpleMap from "./map";
 import Nav from "./Navigation.jsx";
 import Card from "./StatComponents";
-import { PieChart } from "react-minimal-pie-chart";
+import PieChart from "./PieChart";
 import useApplicationData from "./helpers/useApplicationData";
 import DataContext from "./dataContext";
 import "../App.css";
@@ -15,24 +15,12 @@ export default function App() {
 	return (
 		<>
 			<Nav />
+			Click on a Country to view Covid -19 Statistics of that Country
 			<DataContext.Provider value={data}>
-				<SimpleMap />
-
-				<PieChart
-					data={[
-						{
-							title: "Recovered",
-							value: state.RecoveredCases,
-							color: "	#00FF00",
-						},
-						{ title: "Deaths", value: state.Totaldeath, color: "#C13C37" },
-						{ title: "Active", value: state.ActiveCases, color: "#6A2135" },
-					]}
-					label={({ dataEntry }) => dataEntry.title}
-					radius={20}
-					labelStyle={{ fontSize: "2px", fontWeight: "bold" }}
-				/>
-
+				<p class="MapPIe">
+					<SimpleMap />
+					<PieChart />
+				</p>
 				<Card />
 			</DataContext.Provider>
 		</>
