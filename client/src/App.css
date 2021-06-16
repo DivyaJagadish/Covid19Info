@@ -1,5 +1,5 @@
 .MapPIe {
 	display: flex;
 	flex-direction: row;
-	justify-self: stretch;
+	/* justify-content: space-evenly; */
 }

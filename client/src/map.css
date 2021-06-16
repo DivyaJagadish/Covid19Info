@@ -4,9 +4,9 @@
 }
 
 .leaflet-container {
-	margin-top: 80px;
 	height: 600px;
 	width: 60%;
+	margin-right: 10%;
 }
 
 .leaflet-div-icon {

@@ -8,7 +8,7 @@ export default function Nav() {
 				style={{backgroundColor: "#416ec2"}}
 				className="nav-bar--container">
       <Typography variant="h6" >
-    Covid -19 Map
+    Covid -19  Statistics
     </Typography>
     	</Toolbar>
 		</AppBar>

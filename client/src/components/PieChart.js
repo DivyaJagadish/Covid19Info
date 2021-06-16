@@ -6,6 +6,7 @@ import "../piechart.css";
 export default function Piechart() {
 	const { state } = useContext(DataContext);
 	console.log(state);
+
 	return (
 		<p>
 			<PieChart
