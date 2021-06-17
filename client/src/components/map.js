@@ -1,11 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import {
-	MapContainer,
-	TileLayer,
-	Marker,
-	Popup,
-	useMapEvents,
-} from "react-leaflet";
+import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
 import "../map.css";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -27,10 +21,10 @@ function SimpleMap() {
 			setInitialPosition([latitude, longitude]);
 			getdataforCountry(latitude, longitude);
 		});
-	}, []);
+	});
 
 	const Markers = () => {
-		const map = useMapEvents({
+		useMapEvents({
 			click(e) {
 				setInitialPosition([e.latlng.lat, e.latlng.lng]);
 				getdataforCountry(e.latlng.lat, e.latlng.lng);
@@ -47,11 +41,7 @@ function SimpleMap() {
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 				/>
 				<Markers />
-				<Marker icon={customMarker} position={initialPosition}>
-					<Popup>
-						A pretty CSS3 popup. <br /> Easily customizable.
-					</Popup>
-				</Marker>
+				<Marker icon={customMarker} position={initialPosition}></Marker>
 			</MapContainer>
 		</>
 	);

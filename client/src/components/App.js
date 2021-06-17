@@ -18,7 +18,7 @@ export default function App() {
 		<>
 			<Nav />
 			<Textdata
-				data={"Click on the Country to show covid -19 statistics"}
+				data={"Click on the Country in the map to View covid -19 statistics "}
 				id="Text"
 			/>
 			<DataContext.Provider value={data}>
@@ -27,7 +27,6 @@ export default function App() {
 						<SimpleMap />
 						<Card />
 					</p>
-
 					<p>
 						<CountryData />
 						<PieChart />
