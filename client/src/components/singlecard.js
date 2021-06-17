@@ -10,8 +10,9 @@ import { blue, blueGrey } from "@material-ui/core/colors";
 const useStyles = makeStyles({
 	root: {
 		minWidth: 275,
-
-		maxWidth: 275,
+		marginLeft: 12,
+		marginRight: 12,
+		marginBottom: 12,
 	},
 
 	pos: {

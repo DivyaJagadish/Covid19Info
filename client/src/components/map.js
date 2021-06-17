@@ -41,17 +41,13 @@ function SimpleMap() {
 	};
 	return (
 		<>
-			<MapContainer center={initialPosition} zoom={2}>
+			<MapContainer center={initialPosition} zoom={3}>
 				<TileLayer
 					attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 				/>
 				<Markers />
-				<Marker
-					icon={customMarker}
-					position={initialPosition}
-					interactive={false}
-				>
+				<Marker icon={customMarker} position={initialPosition}>
 					<Popup>
 						A pretty CSS3 popup. <br /> Easily customizable.
 					</Popup>

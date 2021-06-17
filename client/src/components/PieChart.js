@@ -3,6 +3,7 @@ import { PieChart } from "react-minimal-pie-chart";
 import DataContext from "./dataContext";
 import "../piechart.css";
 import Textdata from "./Text";
+import CountryData from "./CountryDataCard";
 import SingleCard from "./singlecard";
 export default function Piechart() {
 	const { state } = useContext(DataContext);
@@ -10,11 +11,7 @@ export default function Piechart() {
 
 	return (
 		<p>
-			<SingleCard
-				title={"Country"}
-				value={state.CountryName}
-				color={"#91E0FF"}
-			/>
+			<SingleCard title={"Covid- 19 Statistics"} value={state.CountryName} />
 			<PieChart
 				data={[
 					{

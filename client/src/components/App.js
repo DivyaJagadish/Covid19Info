@@ -5,6 +5,7 @@ import Card from "./StatComponents";
 import PieChart from "./PieChart";
 import useApplicationData from "./helpers/useApplicationData";
 import DataContext from "./dataContext";
+import CountryData from "./CountryDataCard";
 import "../App.css";
 import Textdata from "./Text";
 export default function App() {
@@ -24,11 +25,13 @@ export default function App() {
 				<p class="MapPIe">
 					<SimpleMap />
 					<p>
+						<CountryData />
 						<PieChart />
-						<Card />
 					</p>
 				</p>
+				<Card />
 			</DataContext.Provider>
+			Last updated : {Date(state.updated)}
 		</>
 	);
 }
