@@ -21,7 +21,7 @@ function SimpleMap() {
 			setInitialPosition([latitude, longitude]);
 			getdataforCountry(latitude, longitude);
 		});
-	});
+	}, []);
 
 	const Markers = () => {
 		useMapEvents({

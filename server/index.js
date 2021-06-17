@@ -12,9 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/api/lat=:lat&&long=:long", (req, res) => {
 	var datadetails;
-	console.log(req.params);
 	const country = geoRev.country(req.params.lat, req.params.long);
-	console.log(country[0].name);
 	axios
 		.get(`https://disease.sh/v3/covid-19/countries/ ${country[0].name}`)
 
@@ -22,7 +20,6 @@ app.get("/api/lat=:lat&&long=:long", (req, res) => {
 			datadetails = result.data;
 		})
 		.then(() => {
-			console.log(datadetails);
 			res.json({ message: datadetails });
 		})
 		.catch((err) => console.log(err));
