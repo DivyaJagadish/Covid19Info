@@ -11,7 +11,7 @@ export default function Piechart() {
 
 	return (
 		<p>
-			<SingleCard title={"Covid- 19 Statistics"} value={state.CountryName} />
+			{/* <SingleCard title={"Covid- 19 Statistics"} value={state.CountryName} /> */}
 			<PieChart
 				data={[
 					{

@@ -31,12 +31,12 @@ export default function OutlinedCard() {
 	return (
 		<Card
 			className={classes.root}
-			variant="outlined"
-			style={{ backgroundColor:"#91E0FF" }}
+			// variant="outlined"
+			// style={{ backgroundColor:"#91E0FF" }}
 		>
 			<CardContent>
 				<Typography variant="h5" component="h2">
-					Country : {state.CountryName}
+					Covid -19 Statistics {state.CountryName}
 
 				</Typography>
         <CardMedia

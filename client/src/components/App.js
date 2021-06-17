@@ -23,13 +23,16 @@ export default function App() {
 			/>
 			<DataContext.Provider value={data}>
 				<p class="MapPIe">
-					<SimpleMap />
+					<p>
+						<SimpleMap />
+						<Card />
+					</p>
+
 					<p>
 						<CountryData />
 						<PieChart />
 					</p>
 				</p>
-				<Card />
 			</DataContext.Provider>
 			Last updated : {Date(state.updated)}
 		</>
