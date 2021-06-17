@@ -20,10 +20,10 @@ export default function Piechart() {
 						color: "	#00FF00",
 					},
 					{ title: "Deaths", value: state.Totaldeath, color: "#C13C37" },
-					{ title: "Active", value: state.ActiveCases, color: "#6A2135" },
+					{ title: "Active", value: state.ActiveCases, color: "#FFFF00" },
 				]}
 				label={({ dataEntry }) => dataEntry.title}
-				labelStyle={{ fontSize: "10px", fontWeight: "bold" }}
+				labelStyle={{ fontSize: "5px", fontWeight: "bold" }}
 			/>
 		</p>
 	);
