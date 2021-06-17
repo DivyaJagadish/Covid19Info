@@ -25,6 +25,10 @@ export default function useApplicationData() {
 				NewCases: result.data.message.todayCases,
 				todayRecovered: result.data.message.todayRecovered,
 				CountryName: result.data.message.country,
+				CountryFlag: result.data.message.countryInfo.flag,
+				Population: result.data.message.population,
+				continent: result.data.message.continent,
+				updated: result.data.message.updated,
 			}));
 		});
 	}

@@ -3,3 +3,7 @@
 	flex-direction: row;
 	/* justify-content: space-evenly; */
 }
+
+#Text {
+	margin-top: 100px;
+}

@@ -10,7 +10,7 @@ import { blue, blueGrey } from "@material-ui/core/colors";
 const useStyles = makeStyles({
 	root: {
 		minWidth: 275,
-		backgroundColor: blueGrey,
+
 		maxWidth: 275,
 	},
 
@@ -23,13 +23,16 @@ export default function OutlinedCard(props) {
 	const classes = useStyles();
 
 	return (
-		<Card className={classes.root} variant="outlined">
+		<Card
+			className={classes.root}
+			variant="outlined"
+			style={{ backgroundColor: props.color }}
+		>
 			<CardContent>
 				<Typography variant="h5" component="h2">
-					{props.title}
-				</Typography>
-				<Typography className={classes.pos} color="textSecondary">
-					{props.value}
+					{props.title} : {props.value}
+					{/* </Typography>
+				<Typography className={classes.pos} color="textSecondary"> */}
 				</Typography>
 			</CardContent>
 		</Card>

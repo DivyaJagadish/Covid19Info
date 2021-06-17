@@ -16,13 +16,18 @@ export default function App() {
 	return (
 		<>
 			<Nav />
-			<Textdata data={"Click on the Country to show covid -19 statistics"} />
+			<Textdata
+				data={"Click on the Country to show covid -19 statistics"}
+				id="Text"
+			/>
 			<DataContext.Provider value={data}>
 				<p class="MapPIe">
 					<SimpleMap />
-					<PieChart />
+					<p>
+						<PieChart />
+						<Card />
+					</p>
 				</p>
-				<Card />
 			</DataContext.Provider>
 		</>
 	);
