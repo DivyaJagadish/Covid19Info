@@ -10,7 +10,8 @@ Covid19Info is a React based interactive webapplication which helps the user to 
 
 ### Tech Stack
 
-Front-end: React, Axios,React-leaflet,React-minimal pie-chart, Material UI
+Front-end: React, Axios,React-leaflet,React-minimal pie-chart, Material UI,CSS
+
 Back-end: Express, NodeJS, Axios, geo-reverse , disease.sh - Open Disease Data API
 
 ### Setup
