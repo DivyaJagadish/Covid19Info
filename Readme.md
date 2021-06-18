@@ -1,6 +1,7 @@
 ### Covid19Info
 
 Covid19Info is a React based interactive webapplication which helps the user to view the current covid -19 statistics of each Country.
+![](https://github.com/DivyaJagadish/Covid19Info/blob/master/document/Screenshot.png?raw=true)
 
 ### Features
 
