@@ -23,4 +23,4 @@ Back-end: Express, NodeJS, Axios, geo-reverse , disease.sh - Open Disease Data A
 
 ### Credits
 
-The Covid-19 data used in the application obtained from disease.sh - Open Disease Data API
+The Covid-19 data used in the application obtained from [disease.sh](https://disease.sh/)- Open Disease Data API
