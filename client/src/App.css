@@ -7,3 +7,24 @@
 #Text {
 	margin-top: 100px;
 }
+
+@media only screen and (max-width: 1024px) {
+	nav {
+		height: 50px;
+		background-color: #c4a300;
+	}
+	.MapPIe {
+		display: flex;
+		flex-direction: column;
+	}
+
+	body {
+		margin-top: 55px;
+	}
+
+	card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+}
