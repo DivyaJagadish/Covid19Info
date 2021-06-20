@@ -4,16 +4,20 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
 	root: {
 		minWidth: 275,
 		marginRight: 12,
 		marginBottom: 12,
+		[theme.breakpoints.down("md")]: {
+			maxWidth: "80%",
+			margin: 5,
+		},
 	},
 	pos: {
 		marginBottom: 12,
 	},
-});
+}));
 
 export default function OutlinedCard(props) {
 	const classes = useStyles();

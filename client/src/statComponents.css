@@ -1,7 +1,19 @@
 .stat {
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-
 	display: flex;
 	flex-direction: row;
 	height: fit-content;
+}
+
+@media only screen and (max-width: 1024px) {
+	.stat {
+		font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		height: fit-content;
+	}
+	p {
+		margin: 1em;
+	}
 }

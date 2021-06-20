@@ -21,10 +21,4 @@
 	body {
 		margin-top: 55px;
 	}
-
-	card {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-	}
 }

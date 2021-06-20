@@ -2,3 +2,9 @@
 	height: auto;
 	width: auto;
 } */
+@media only screen and (max-width: 1024px) {
+	p {
+		height: auto;
+		width: auto;
+	}
+}
