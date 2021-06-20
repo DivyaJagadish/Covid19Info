@@ -8,6 +8,7 @@ import DataContext from "./dataContext";
 import CountryData from "./CountryDataCard";
 import "../App.css";
 import Textdata from "./Text";
+ import ScrollToTop from "react-scroll-to-top";
 export default function MobileApp() {
 	const { state, getdataforCountry } = useApplicationData();
 	const data = {
@@ -27,6 +28,7 @@ export default function MobileApp() {
 						<CountryData />
             	<Card />
 						<PieChart />
+            <ScrollToTop smooth height ={80} />
 				</p>
 			</DataContext.Provider>
 			Last updated : {Date(state.updated)}
