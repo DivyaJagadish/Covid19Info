@@ -11,17 +11,20 @@ const useStyles = makeStyles((theme)=>({
 	root: {
 		minWidth: 275,
 			[theme.breakpoints.down("md")]: {
-			maxWidth: "80%",
+			maxWidth: "100%",
 			margin: 5,
+
 		},
 	},
   media: {
     height:200,
-    objectFit:"cover"
+    objectFit:"cover",
+		[theme.breakpoints.down("md")]: {
+		height :200,
+    objectFit:"cover",
+		},
   },
-	pos: {
-		marginBottom: 12,
-	},
+	
 }));
 
 export default function OutlinedCard() {

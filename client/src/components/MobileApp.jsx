@@ -23,7 +23,6 @@ export default function MobileApp() {
 			/>
 			<DataContext.Provider value={data}>
 				<p class="MapPIe">
-		
 						<SimpleMap />
 						<CountryData />
             	<Card />

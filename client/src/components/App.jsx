@@ -3,8 +3,8 @@ import WebApp from "./WebApp";
 import useWindowSize from "./helpers/useWindowSize";
 import MobileApp from "./MobileApp";
 export default function App() {
-	console.log(window.innerWidth);
-	const mode = window.innerWidth > 1024 ? true : false;
+	const windowsize = useWindowSize();
+	const mode = windowsize.width > 1024 ? true : false;
 
 	return (
 		<>

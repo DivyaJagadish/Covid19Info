@@ -5,7 +5,6 @@ import "../statComponents.css";
 
 export default  function StatComponents(props){
   const {state}= useContext(Datacontext);
-  console.log(state);
   return(
   <>
    <div className = "stat">
