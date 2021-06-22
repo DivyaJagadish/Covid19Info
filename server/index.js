@@ -10,6 +10,7 @@ const geoRev = require("geo-reverse");
 app.use(express.static(path.resolve(__dirname, "../client/build")));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// finds the country and data and sends back to React
 app.get("/api/lat=:lat&&long=:long", (req, res) => {
 	var datadetails;
 	const country = geoRev.country(req.params.lat, req.params.long);
